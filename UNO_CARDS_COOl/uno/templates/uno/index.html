@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "{% static 'index__style.css' %}">
+
+    <title>UNO</title>
+</head>
+<body style="background-image: url({% static 'img/index/second__back.webp' %}), url({% static 'img/index/back.jpg' %});">
+    <div class = "body">
+        <img src ="{% static 'img/index/logo.png' %}" class = "logo">
+        <div class = "menu">
+            <form class = "play" method="post">
+                <div class = "avatar__name">
+                    <img src = "{% static 'img/index/hay.png' %}" class = "hat">
+                    <div class = "name">
+                        <label class = "name__label">ваш псевдоним</label>
+                        {% csrf_token %}
+
+                        {{form}}
+                    </div>
+                </div>
+                <button class = "btn__play" type = "submit">Играть</button>
+            </form>
+            <div class = "how__toplay">
+                <p class = "play__title">как играть</p>
+                <p class = "text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Используйте только карты того же цвета
+                    или масти, что и карта на столе.
+                </p>
+                <p class = "text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Черную карту можно использовать всегда.
+                </p>
+                <p class = "text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Побеждает человек без карт.
+                </p>
+                <a href = "https://nastolki-spb.ru/sites/default/files/uploads/1986/uno-pravila.pdf" class = "full">фулл</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

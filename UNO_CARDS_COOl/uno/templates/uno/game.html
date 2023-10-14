@@ -1,0 +1,715 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ура, УНО!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "{% static 'game__style.css' %}">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+</head>
+<body >
+<!--style = "background-image: url({% static 'img/game__back.jpg' %});" -->
+<div class = "rotate__direction arrows" style = "background-image: url({% static 'img/rotate_direction.png' %});">
+</div>
+    <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <filter id='goo'>
+      <fegaussianblur in='SourceGraphic' result='blur' stddeviation='10'></fegaussianblur>
+      <fecolormatrix in='blur' mode='matrix' result='goo' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7'></fecolormatrix>
+      <feblend in2='goo' in='SourceGraphic'></feblend>
+    </filter>
+  </defs>
+</svg>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+<span class='particle'></span>
+    <div class = "card__merge">
+    <div class = "front__player">
+        <p class = "team"></p>
+        <div class = "name__count__front">
+            <div><p class = "text">{{front}}</p></div>
+            <div class = "counter" style = "background-image: url({% static 'img/cards.png' %})">
+                <p class = "front__player__counter">7</p>
+            </div>
+        </div>
+        <img class = "img__frontplayer" src = "{% static 'img/deck/07.png' %}">
+    </div>
+    <div class = "player__table">
+        
+        <div class = "left">
+            {% if left != "none_pl___" %}
+            <div class = "name__count__left">
+                <div><p class = "text">{{left}}</p></div>
+                <div class = "counter" style = "background-image: url({% static 'img/cards.png' %})">
+                    <p class = "left__player__counter">7</p>
+                </div>
+            </div>
+            {% endif %}
+            <img class = "img__leftplayer">
+        </div>
+
+        <div style = "display: flex; flex-direction: row; justify-content: center;">
+            <div class = "deck">
+
+            </div>
+            <div class = "color__pick" style="display: none">
+                <button class = "romb blue__romb" style = "background-image: url({% static 'img/rombs/blue__romb.png' %}); background-color: transparent; border: none;"></button>
+                <div class = "middle__rombs">
+                    <button class = "romb green__romb" style = "background-image: url({% static 'img/rombs/green__romb.png' %}); background-color: transparent; border: none;"></button>
+                    <button class = "romb red__romb" style = "background-image: url({% static 'img/rombs/red__romb.png' %}); background-color: transparent; border: none; "></button>
+                </div>
+                <button class = "romb yellow__romb" style = "background-image: url({% static 'img/rombs/yellow__romb.png'  %}); background-color: transparent; border: none;"></button>
+<!--                <img class = "romb green__romb" src = "{% static 'img/rombs/green__romb.png' %}">-->
+<!--                <img class = "romb red__romb" src = "{% static 'img/rombs/red__romb.png' %}">-->
+<!--                <img class = "romb yellow__romb" src = "{% static 'img/rombs/yellow__romb.png' %}">-->
+            </div>
+            <div class = "card__pick" style="display: none;">
+                <button class = "btn__s text__buttons" style="background-color: green; font-size: 16px;">Разыграть</button>
+                <img class ="card__pick__img">
+                <button class = "btn__v text__buttons" style="background-color: red; font-size: 16px;">Взять</button>
+            </div>
+
+            <img class = "card__on__table">
+        </div>
+        <div class = "right">
+            {% if "none_pl___" != right %}
+            <div class = "name__count__right">
+                <div><p class = "text">{{right}}</p></div>
+                <div class = "counter" style = "background-image: url({% static 'img/cards.png' %})">
+                    <p class = "right__player__counter">7</p>
+                </div>
+            </div>
+            {% endif %}
+            <img class = "img__rightplayer">
+        </div>
+        
+    </div>
+    </div>
+        <div class = "cards">
+    </div>
+
+
+
+    
+
+    <!-- {% csrf_token %}
+    <button type="submit" class = "btn">сыграть</button> -->
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>
+        let a = document.querySelector(".team");
+        let cards = document.querySelector(".cards");
+        let cards__can__play = document.querySelector(".cards__can__play");
+        let btn = document.querySelector(".btn");
+        let color__pick = document.querySelector(".color__pick");
+        let pickon = "";
+        let lastdec = "";
+
+        Start();
+
+        function getCookie(c_name)
+        {
+            if (document.cookie.length > 0)
+            {
+                c_start = document.cookie.indexOf(c_name + "=");
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1;
+                    c_end = document.cookie.indexOf(";", c_start);
+                    if (c_end == -1) c_end = document.cookie.length;
+                    return unescape(document.cookie.substring(c_start,c_end));
+                }
+            }
+            return "";
+        }
+        function toDegrees (angle) {
+          return angle * (180 / Math.PI);
+        }
+
+        /* btn.addEventListener("click", function(){
+            $.ajaxSetup({
+                headers: { "X-CSRFToken": getCookie("csrftoken") }
+            });
+            $.ajax({
+                data: {'hod': 'no'},
+                url: "{% url 'turn' %}",
+                type: 'post',
+                success: function(response){
+                    
+                },
+                error: function(response){
+                    console.log("ERROR: post turn fails");
+                }
+            });
+        }); */
+
+        function str_to_lst(s){
+            let ans = [[], [], [], [], [], []];
+
+            let flag = 0;
+            
+            for(let i = 0; i < s.length; i += 2){
+                if(s[i] + s[i + 1] == "--"){
+                    flag++;
+                }
+                else if (flag == 1){
+                    ans[1].push(s[i] + s[i + 1]);
+                }
+                else if (flag == 0){
+                    ans[0].push(s[i] + s[i + 1]);
+                }
+                else if (flag == 2){
+                    ans[2].push(s[i]);--i;
+                }
+                else if (flag == 3){
+                    ans[3].push(s[i] + s[i + 1]);
+                }
+                else if (flag == 4){
+                    ans[4].push(s[i] + s[i + 1]);
+                }
+                else if (flag == 5){
+                    ans[5].push(s[i] + s[i + 1]);
+                }
+            }
+            return ans;
+        }
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+
+        function Update(){
+            if (pickon != ""){
+                color__pick.style.cssText = "display: flex";
+
+                document.querySelector(".red__romb").addEventListener("click", function(e){
+                    e.stopImmediatePropagation();
+                    $.ajaxSetup({
+                        headers: { "X-CSRFToken": getCookie("csrftoken") }
+                    });
+                    $.ajax({
+                        data: {'hod': pickon + "r"},
+                        url: "{% url 'turn' %}",
+                        type: 'post',
+                        success: function(response){
+                            pickon = "";
+                        },
+                        error: function(response){
+                            console.log("ERROR: post turn fails");
+                        }
+                    });
+                });
+                document.querySelector(".blue__romb").addEventListener("click", function(e){
+                    e.stopImmediatePropagation();
+                    $.ajaxSetup({
+                        headers: { "X-CSRFToken": getCookie("csrftoken") }
+                    });
+                    $.ajax({
+                        data: {'hod': pickon + "b"},
+                        url: "{% url 'turn' %}",
+                        type: 'post',
+                        success: function(response){
+                            pickon = "";
+                        },
+                        error: function(response){
+                            console.log("ERROR: post turn fails");
+                        }
+                    });
+                });
+                document.querySelector(".yellow__romb").addEventListener("click", function(e){
+                    e.stopImmediatePropagation();
+                    $.ajaxSetup({
+                        headers: { "X-CSRFToken": getCookie("csrftoken") }
+                    });
+                    $.ajax({
+                        data: {'hod': pickon + "y"},
+                        url: "{% url 'turn' %}",
+                        type: 'post',
+                        success: function(response){
+                            pickon = "";
+                        },
+                        error: function(response){
+                            console.log("ERROR: post turn fails");
+                        }
+                    });
+                });
+                document.querySelector(".green__romb").addEventListener("click", function(e){
+                    e.stopImmediatePropagation();
+                    $.ajaxSetup({
+                        headers: { "X-CSRFToken": getCookie("csrftoken") }
+                    });
+                    $.ajax({
+                        data: {'hod': pickon + "g"},
+                        url: "{% url 'turn' %}",
+                        type: 'post',
+                        success: function(response){
+                            pickon = "";
+                        },
+                        error: function(response){
+                            console.log("ERROR: post turn fails");
+                        }
+                    });
+                });
+            }
+            else{
+                color__pick.style.cssText += "display: none";
+            }
+            let delay = 1000/2;
+
+
+            $.ajax({
+                url: "{% url 'get_cards' %}",
+                type: 'get',
+                success: function(response) {
+                    let dec = document.querySelector(".deck");
+                    if (response != lastdec) {
+                        lastdec = response;
+                        help = str_to_lst(response);
+                        cards__string = "";
+
+                        for(let i = 0; i < help[1].length; ++i){
+                            cards__can__play = "";
+                            if (help[0].indexOf(help[1][i]) != -1){
+                                cards__can__play = 
+                                    "-webkit-box-shadow: 1px -3px 4px 7px rgba(233, 239, 149, 0.63);" +
+                                    "-moz-box-shadow: 1px -3px 4px 7px rgba(233, 239, 149, 0.63);" +
+                                    "box-shadow: 1px -3px 4px 7px rgba(233, 239, 149, 0.63);"
+                                ;
+                            }
+                            let angle = 0;
+                            if (i < Math.floor((help[1].length)/2)){
+                                angle = i - Math.floor(help[1].length/2);
+                            }
+                            else if (help[1].length%2==0){
+                                angle = i - Math.floor(help[1].length/2) + 1;
+                            }
+                            else{
+                                angle = i - Math.floor(help[1].length/2);
+                            }
+                            let mn = Math.floor((help[1].length/2) - Math.abs(angle))*3;
+                            angle*=2;
+                            cards__string += 
+                                "<button class = 'btn"+ i.toString() + "' " + 
+                                "style = \"background-image: url('{% static 'img/'%}" + help[1][i].toUpperCase()+"-masked" + ".jpg'); " + 
+                                cards__can__play +
+                                "transform: rotate(" + angle.toString() + "deg);" +
+                                "margin-bottom: " + mn.toString() + "px;" +
+                                "margin-left: 5px;" +
+                                "\"></button>"
+                                ;
+                            /* "<p> Карта " + help[1][i] + "</p>"; */
+                        }
+                        console.log(help[4]);
+                        if (help[4].length){
+                            document.querySelector(".card__pick__img").src = "{% static 'img/'%}" + help[4][0].toUpperCase() + "-masked.jpg";
+                        }
+
+                        cards.innerHTML = cards__string;
+                        dec.innerHTML = "<button " + 
+                                "style = \"background-image: url('{% static 'img/'%}NO-masked" + ".jpg'); " + 
+                                "\"></button>"
+                                ;
+
+                        if (help[5][0][0] == '1'){
+                            document.querySelector(".arrows").style.cssText = "background-image: url({% static 'img/rotate_direction_un.png' %});";
+                            document.querySelector(".arrows").classList.remove("rotate__direction");
+                            document.querySelector(".arrows").classList.add("rotate__direction__un");
+                        }
+                        else{
+                            document.querySelector(".arrows").style.cssText = "background-image: url({% static 'img/rotate_direction.png' %});";
+                            document.querySelector(".arrows").classList.remove("rotate__direction__un");
+                            document.querySelector(".arrows").classList.add("rotate__direction");
+                        }
+
+                        if (help[2][0] == '1'){
+                            dec.innerHTML = "<button class = 'btn' " + 
+                                "style = \"background-image: url('{% static 'img/'%}NO-masked" + ".jpg'); " + 
+                                "-webkit-box-shadow: 1px -3px 4px 7px rgba(233, 239, 149, 0.63);" +
+                                "-moz-box-shadow: 1px -3px 4px 7px rgba(233, 239, 149, 0.63);" +
+                                "box-shadow: 1px -3px 4px 7px rgba(233, 239, 149, 0.63);" +
+                                "\"></button>"
+                                ;
+                                sleep(300);
+                                document.querySelector('.btn').addEventListener("click", function(e){
+                                    e.stopImmediatePropagation();
+                                $.ajaxSetup({
+                                    headers: { "X-CSRFToken": getCookie("csrftoken") }
+                                });
+                                $.ajax({
+                                    data: {'hod': "no"},
+                                    url: "{% url 'turn' %}",
+                                    type: 'post',
+                                    success: function(response){
+
+                                    },
+                                    error: function(response){
+                                        console.log("ERROR: post turn fails");
+                                }
+                                });
+                            });
+                        }
+                        let front_pl = document.querySelector('.img__frontplayer');
+                        let front__pl__c = document.querySelector('.front__player__counter');
+                        if (help[2].length == 4){
+                            if (help[2][2] != '0') front_pl.src = "{% static 'img/deck' %}/" + "10" + ".png";
+                            else front_pl.src = "{% static 'img/deck' %}/" + help[2][2] + help[2][3] + ".png";
+                            front__pl__c.textContent =  (help[2][2]=='0'?' ':help[2][2]) + help[2][3];
+                        }
+                        else {
+                            let right_pl = document.querySelector('.img__rightplayer');
+                            let right__pl__c = document.querySelector('.right__player__counter');
+                            if (help[2][2] != '0') right_pl.src = "{% static 'img/deck' %}/" + "10"+ ".png";
+                            else right_pl.src = "{% static 'img/deck' %}/" + help[2][2] + help[2][3] + ".png";
+                            right__pl__c.textContent =  (help[2][2]=='0'?' ':help[2][2]) + help[2][3];
+
+                            if (help[2][5] != '0') front_pl.src = "{% static 'img/deck' %}/" + "10" + ".png";
+                            else front_pl.src = "{% static 'img/deck' %}/" + help[2][2 + 3] + help[2][3 + 3] + ".png";
+                            front__pl__c.textContent =  (help[2][2 + 3]=='0'?' ':help[2][2 + 3]) + help[2][3 + 3];
+
+                            if (help[2].length > 7){
+                                let left_pl = document.querySelector('.img__leftplayer');
+                                let left__pl__c = document.querySelector('.left__player__counter');
+                                if (help[2][8] != '0') left_pl = "{% static 'img/deck' %}/" + "10" + ".png";
+                                else left_pl = "{% static 'img/deck' %}/" + help[2][2 + 6] + help[2][3 + 6] + ".png";
+                                left__pl__c.textContent =  (help[2][2 + 6]=='0'?' ':help[2][2 + 6]) + help[2][3 + 6];
+                            }
+                        }   
+                        let card__on__table = document.querySelector(".card__on__table");
+
+                        if (help[3][0][1] == 'b'){
+                            document.body.style.cssText += "background-image: linear-gradient(120deg, rgba(224, 195, 252, 0.75) 0%, rgba(142, 197, 252, 0.75) 100%)";
+                            document.querySelectorAll(".particle").forEach( i =>{
+                                i.style.cssText += "background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);";
+                            });;
+                        }
+                        else if (help[3][0][1] == 'g'){
+                            document.body.style.cssText += "background-image: linear-gradient(120deg, #a8f246  0%, #4e8a00 100%)";
+                            document.querySelectorAll(".particle").forEach( i =>{
+                                i.style.cssText += "background: linear-gradient(120deg, #a8f246  0%, #4e8a00 100%)";
+                            });
+                        }
+                        else if (help[3][0][1] == 'r'){
+                            document.body.style.cssText += "background-image: linear-gradient(120deg, #c96f7b 0%, #bf3f3f 100%)";
+                            document.querySelectorAll(".particle").forEach( i =>{
+                                i.style.cssText += "background: linear-gradient(120deg, #c96f7b 0%, #bf3f3f 100%)";
+                            });
+                        }
+                        else if (help[3][0][1] == 'y'){
+                            document.body.style.cssText += "background-image: linear-gradient(120deg, #cccc00  0%, #ffbf00 100%)";
+                            document.querySelectorAll(".particle").forEach( i =>{
+                                i.style.cssText += "background: linear-gradient(120deg, #ffa000  0%, #ffbf00 100%)";
+                            });
+                        }
+
+                        if(help[3][0][0] == 'u') help[3][0] = 'un';
+                        card__on__table.src = "{% static 'img' %}" + "/" + help[3][0].toUpperCase() + "-masked.jpg";
+
+                        /* cards__string = "";
+                        for(let i = 0; i < help[0].length; ++i){
+                            cards__string += "<button class = 'btn"+ i.toString() +"'>" + help[0][i]+ "</button>";
+                        }
+                        cards__can__play.innerHTML = cards__string; */
+                        if(help[4].length){
+                            document.querySelector('.card__pick').style.cssText = "display: flex";
+                            document.querySelector('.btn__s').addEventListener("click", function(e){
+                                if(help[4][0] != "+4" && help[4][0] != "un"){
+                                    e.stopImmediatePropagation();
+                                    $.ajaxSetup({
+                                        headers: { "X-CSRFToken": getCookie("csrftoken") }
+                                    });
+                                    $.ajax({
+                                        data: {'hod': help[4][0]},
+                                        url: "{% url 'turn' %}",
+                                        type: 'post',
+                                        success: function(response){
+                                            pickon = "";
+                                        },
+                                        error: function(response){
+                                            console.log("ERROR: post turn fails");
+                                        }
+                                    });
+                                }
+                                else{
+                                    pickon = help[4][0];
+                                }
+                            });
+                            document.querySelector('.btn__v').addEventListener("click", function(e){
+                                e.stopImmediatePropagation();
+                                $.ajaxSetup({
+                                    headers: { "X-CSRFToken": getCookie("csrftoken") }
+                                });
+                                $.ajax({
+                                    data: {'hod': "ge"},
+                                    url: "{% url 'turn' %}",
+                                    type: 'post',
+                                    success: function(response){
+                                        pickon = "";
+                                    },
+                                    error: function(response){
+                                        console.log("ERROR: post turn fails");
+                                    }
+                                });
+                            });
+                        }
+                        else{
+                            document.querySelector('.card__pick').style.cssText = "display: none";
+                            for(let i = 0; i  < help[1].length; ++i){
+                                if (help[0].indexOf(help[1][i]) != -1){
+                                    document.querySelector('.btn' + i.toString()).addEventListener("click", function(e){
+                                        document.querySelector('.btn' + i.toString()).style.cssText +=
+                                        "transition: transform 1s ease-in-out;"+
+                                        "-webkit-transition: transform 1s ease-in-out; /** Chrome & Safari **/"+
+                                        "-moz-transition: transform 1s ease-in-out; /** Firefox **/"+
+                                        "-o-transition: transform 1s ease-in-out; /** Opera **/" +
+
+                                        "transform: translate(0,-350px);"+
+                                        "-webkit-transform: translate(0,-350px);"+
+                                        "-o-transform: translate(0,-350px);"+
+                                        "-moz-transform: translate(0,-350px);";
+                                        if(help[1][i] != "+4" && help[1][i] != "un"){
+                                            e.stopImmediatePropagation();
+                                            $.ajaxSetup({
+                                                headers: { "X-CSRFToken": getCookie("csrftoken") }
+                                            });
+                                            $.ajax({
+                                                data: {'hod': help[1][i]},
+                                                url: "{% url 'turn' %}",
+                                                type: 'post',
+                                                success: function(response){
+                                                    pickon = "";
+                                                },
+                                                error: function(response){
+                                                    console.log("ERROR: post turn fails");
+                                                }
+                                            });
+                                        }
+                                        else{
+                                            pickon = help[1][i];
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    }
+                    
+                },
+                error: function(response){
+                    a.textContent = "error";
+                }
+            });
+            setTimeout(Update, delay);
+        }
+
+        function Start(){
+            Update();
+        }
+    </script>
+</body>
+</html>

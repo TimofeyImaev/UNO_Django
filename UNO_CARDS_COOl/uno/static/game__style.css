@@ -1,0 +1,246 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.rotate__direction{
+    position: absolute;
+    top: calc(50vh - 160px + 20px);
+    left: calc(50vw - 190px);
+    height: 320px;
+    width: 380px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    animation-duration: 13s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rotate__direction__un{
+    position: absolute;
+    top: calc(50vh - 160px + 20px);
+    left: calc(50vw - 190px);
+    height: 320px;
+    width: 380px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    animation-duration: 13s;
+    animation-name: slidein_un;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes slidein{
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slidein_un{
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.card__merge{
+    position: absolute;
+    width:100%;
+    top: 20px;
+}
+
+.card__merge1{
+    position: absolute;
+    left: 20px;
+}
+
+.card__merge2{
+    position: absolute;
+    right: 20px;
+}
+
+.block{
+
+}
+
+.card__pick{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.card__pick__img{
+    width:100px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-bottom: 0px;
+}
+
+button{
+    width:100px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-bottom: 0px;
+    
+}
+
+button:hover{
+    transition: all 0.5 ease;
+    scale: 1.1;
+
+}
+
+.cards{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 250px;
+
+}
+
+
+
+.player__table{
+    box-sizing: border-box;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.counter{
+    box-sizing:border-box;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 17px;
+    padding-left: 32px;
+    font-size: 24px;
+    color: black;
+}
+
+.front__player__counter{
+    margin: 0;
+}
+
+.card__on__table{
+    margin-left: 20px;
+    width:100px;
+    height: 200px;
+}
+
+.deck{
+
+}
+
+.romb{
+    height: 100px;
+    width: 100px;
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 15% 100%, 0% 50%, 15% 0);
+}
+
+.name__count__left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    font-size: 40px;
+
+}
+
+.name__count__right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    font-size: 40px;
+
+}
+
+.name__count__front{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    font-size: 40px;
+
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.front__player{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text{
+    font-family: 'Darker Grotesque';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text__buttons{
+    font-family: 'Permanent Marker', cursive;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+}
+
+.img__frontplayer{
+    width: 300px;
+    height:200px;
+}
+
+.color__pick{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.middle__rombs{
+
+}
+
+.blue__romb{
+    margin-bottom: -45px;
+}
+
+.yellow__romb{
+    margin-top: -50px;
+}

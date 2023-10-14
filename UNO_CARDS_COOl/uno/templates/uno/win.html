@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YESSSSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Margarine&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "{% static 'win__style.css' %}">
+</head>
+<body style="background-image: url({% static 'img/lobbby_back.webp' %});">
+    <!-- {% if request.user.is_authenticated %} -->
+    <div style="display: тщту; flex-direction: column;">
+        <div class = "quoute" style = "display: flex;">
+            <ol>
+            <li class = "text__quoute">Если у вас нет нужной карты, вам нужно ее вытянуть. Если вы вытягиваете карту, которую можете использовать, ходите ей. Если она не подходит, следующий игрок делает ход.</li>
+            </ol>
+        </div>
+        <div class = "quoute" style="height: 150px">
+            <button class = "reload" style="background-image: url({% static 'img/reload.png' %});"></button>
+            <div class = "scroll-container scroll--sublime" style="height: 150px">
+                
+            </div>
+        </div>
+    </div>
+    <div class = "quoute__winner">
+        <ol>
+        <li class = "text__quoute__winner">Крутой игрок и последний победитель - {{winner}}</li>
+        </ol>
+        <div class = "quoute ac_form" style="height: 90px; opacity: 0.96; padding-top: 5px; display: none;">
+            <p class = "join__name text__quoute__winner joiner"></p>
+            <div class = "buttons">
+                <button class="join__button green_button">Принять</button>
+                <button class="join__button red_button">Отказаться</button>
+            </div>
+        </div>
+    </div>
+
+    <div class = "right__side">
+        <div class = "team__list">
+            <p class = "team">Стань первым ;)</p>
+        </div>
+
+        <button class =  "btn">готов</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>
+        let a = document.querySelector(".team");
+        let btn = document.querySelector(".btn");
+        let ac_form = document.querySelector(".ac_form");
+        let gr_btn = document.querySelector(".green_button");
+        let rd_btn = document.querySelector(".red_button");
+        let reload__btn = document.querySelector(".reload");
+
+        reload__btn.addEventListener('click', function(){
+            $.ajax({
+                url: "{% url 'lobby_query' %}", 
+                type: 'get',
+                success: function(response){
+                    document.querySelector(".scroll-container").innerHTML = "";
+                    let reqparse = JSON.parse(response);
+                    for(let key in reqparse){
+                        document.querySelector(".scroll-container").innerHTML += 
+                        "<div class = 'lobby'>" +
+                        "<p class = 'text__quoute' style = 'font-size: 24px'>"+ key + "</p>" +
+                        "<button class = 'join__button btn" + reqparse[key] + "'>Присоединиться</button>" +
+                        "</div>";
+                    }
+                    for(let key in reqparse){
+                        document.querySelector(".btn" + reqparse[key]).addEventListener("click", function(e){
+                            e.stopImmediatePropagation();
+                            $.ajaxSetup({
+                                headers: { "X-CSRFToken": getCookie("csrftoken") }
+                            });
+                            $.ajax({
+                                data: {'id': reqparse[key]},
+                                url: "{% url 'join_query' %}",
+                                type: 'post',
+                                success: function(response){
+                                    
+                                },
+                                error: function(response){
+                                    console.log("ERROR: post turn fails");
+                                }
+                            });
+                        });
+                    }
+                },
+                error: function(response){
+                    alert("error");
+                }
+            });
+        });
+
+        btn.addEventListener('click', function(){
+            $.ajax({
+                url: "{% url 'ready' %}",
+                type: 'get',
+                success: function(response) {
+
+                },
+                error: function(response){
+                    console.log("ERROR: Change player ready fails");
+                }
+            });
+        });
+
+        gr_btn.addEventListener('click', function(){
+
+            $.ajax({
+                url: "{% url 'join_lobby' %}",
+                type: 'get',
+                success: function(response) {
+                    
+                },
+                error: function(response){
+                    console.log("error green button");
+                }
+            });
+        });
+
+        rd_btn.addEventListener('click', function(){
+            $.ajax({
+                url: "{% url 'join_refuse' %}",
+                type: 'get',
+                success: function(response) {
+                    
+                },
+                error: function(response){
+                    console.log("error red button");
+                }
+            });
+        });
+
+        function getCookie(c_name)
+        {
+            if (document.cookie.length > 0)
+            {
+                c_start = document.cookie.indexOf(c_name + "=");
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1;
+                    c_end = document.cookie.indexOf(";", c_start);
+                    if (c_end == -1) c_end = document.cookie.length;
+                    return unescape(document.cookie.substring(c_start,c_end));
+                }
+            }
+            return "";
+        }
+
+
+
+        Start();
+
+        function Update(){
+            $.ajax({
+                url: "{% url 'team_query' %}",
+                type: 'get',
+                success: function(response) {
+                    a.innerHTML = response;
+                },
+                error: function(response){
+                    a.textContent = "error";
+                }
+            });
+
+            $.ajax({
+                url: "{% url 'get_query' %}",
+                type: 'get',
+                success: function(response) {
+                    if (response == ""){
+                        ac_form.style.cssText += "display: none";
+                    }
+                    else{
+                        ac_form.style.cssText += "display: flex";
+                        document.querySelector(".joiner").textContent = response;
+                    }
+                },
+                error: function(response){
+                    console.log("error get query name");
+                }
+            });
+        }
+
+        function Start(){
+            timer = setInterval(Update, 1000/2);
+        }
+    </script>
+    <!-- {% endif %} -->
+</body>
+</html>
